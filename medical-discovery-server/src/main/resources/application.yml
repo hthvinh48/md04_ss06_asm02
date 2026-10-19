@@ -1,0 +1,16 @@
+server:
+    port: 8761
+
+spring:
+    application:
+        name: medical-discovery-server
+
+eureka:
+    # Server không tự đăng ký với Eureka và không lấy thông tin từ registry
+    client:
+        register-with-eureka: false
+        fetch-registry: false
+
+    # Tắt chế độ tự bảo vệ để Server cập nhật trạng thái của các instance đã đăng ký với Eureka nhanh hơn
+    server:
+        enable-self-preservation: false
